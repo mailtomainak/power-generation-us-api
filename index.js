@@ -14,7 +14,7 @@ const ws = websocket.createServer({
     perMessageDeflate: false,
     objectMode:true
 }, (stream,request)=>{
-    fs.createReadStream('./server/data/DEOK_hourly.csv',{ bufferSize: 64 })
+    fs.createReadStream('./data/DEOK_hourly.csv',{ bufferSize: 64 })
     .pipe(csvToJson())
     .pipe(new slowStream ({ maxWriteInterval: 5 })) // replicate real time processing
     .pipe(stream);
