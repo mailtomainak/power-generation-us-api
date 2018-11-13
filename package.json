@@ -2,6 +2,9 @@
   "name": "power-poc-socket",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "10.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node './server/index' "
